@@ -152,53 +152,6 @@
       <!-- 
         - #HERO
       -->
-      <style>
-        /* Initially Hide Hero Section Elements */
-        #hero-content,
-        #hero-banner {
-          opacity: 0;
-          transform: translateY(50px);
-        }
-
-        /* Animation for Text */
-        @keyframes fadeInLeft {
-          from {
-            opacity: 0;
-            transform: translateX(-100px);
-          }
-
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-
-        /* Animation for Image */
-        @keyframes fadeInRight {
-          from {
-            opacity: 0;
-            transform: translateX(100px);
-          }
-
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-      </style>
-
-      <script>document.addEventListener("DOMContentLoaded", function () {
-          const heroContent = document.getElementById("hero-content");
-          const heroBanner = document.getElementById("hero-banner");
-
-          heroContent.style.animation = "fadeInLeft 2s ease-out forwards";
-          setTimeout(() => {
-            heroBanner.style.animation = "fadeInRight 2s ease-out forwards";
-          }, 500);
-        });
-
-      </script>
-
       <section class="section hero" id="hero-section" style="background: linear-gradient(to right,#ffffff, #def5f5 );"
         aria-label=" hero">
         <div class="container" id="hero-container">
@@ -223,42 +176,10 @@
       <!--
       Image
       -->
-      <style>
-        #blogImage {
-          width: 100%;
-          height: 70%;
-          transition: opacity 0.5s ease-in-out;
-          opacity: 1;
-          object-fit: cover;
-          /* Optional: keeps image looking good inside the box */
-        }
-
-        #blogImage.fade-out {
-          opacity: 0;
-        }
-      </style>
 
       <section>
         <img id="blogImage" src="./assets/images/blog-1.jpg">
       </section>
-
-      <script>
-        const imageElement = document.getElementById("blogImage");
-        let currentIndex = 1;
-
-        setInterval(() => {
-          imageElement.classList.add("fade-out");
-
-          setTimeout(() => {
-            currentIndex++;
-            if (currentIndex > 3) currentIndex = 1;
-            imageElement.src = `./assets/images/blog-${currentIndex}.jpg`;
-            imageElement.classList.remove("fade-out");
-          }, 500);
-        }, 3000);
-      </script>
-
-
 
 
       <!-- 
@@ -302,39 +223,6 @@
         </div>
       </section>
 
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const aboutSection = document.getElementById("about-section");
-          const aboutBanner = document.getElementById("about-banner");
-          const aboutContent = document.getElementById("about-content");
-          let hasAnimated = false; // Prevent re-triggering
-
-          function handleScroll() {
-            const sectionPosition = aboutSection.getBoundingClientRect().top;
-            const screenHeight = window.innerHeight;
-
-            if (sectionPosition < screenHeight * 0.75 && !hasAnimated) {
-              hasAnimated = true;
-
-              // First Animation - Banner (Image)
-              aboutBanner.style.animation = "slideInLeft 1.5s ease-out forwards";
-
-              // Second Animation - Content (Delayed)
-              setTimeout(() => {
-                aboutContent.style.animation = "slideInRight 1.5s ease-out forwards";
-              }, 500); // 500ms delay
-
-              window.removeEventListener("scroll", handleScroll); // Stop checking after animation
-            }
-          }
-
-          window.addEventListener("scroll", handleScroll);
-        });
-      </script>
-
-
-
-
       <!-- 
         - #DOCTOR
       -->
@@ -356,99 +244,6 @@
             }
 
             /* Product Section */
-            #product-section {
-              position: relative;
-              min-height: 100vh;
-              padding: 50px 20px;
-              text-align: center;
-            }
-
-            #product-container {
-              max-width: 1400px;
-              margin: 0 auto;
-            }
-
-
-            .has-scrollbar {
-              display: flex;
-              flex-direction: column;
-              gap: 30px;
-              justify-content: center;
-              flex-wrap: wrap;
-            }
-
-            .scrollbar-item {
-              list-style: none;
-              opacity: 0;
-              /* Initially Hidden */
-              transform: translateX(50px);
-              /* Initial position */
-            }
-
-            .doctor-card {
-              background: white;
-              padding: 20px;
-              border-radius: 10px;
-              box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-              text-align: center;
-              max-width: 1000px;
-            }
-
-
-
-            .card-banner img {
-              width: 100%;
-              height: 600px;
-              /* Increased Height */
-              object-fit: cover;
-              border-radius: 10px;
-            }
-
-            @media (max-width:500px) {
-              .card-banner img {
-                height: 250px;
-              }
-            }
-
-            @media (max-width:760px) {
-              .card-banner img {
-                height: 250px;
-              }
-            }
-
-            .card-title {
-              text-decoration: none;
-              font-size: 1.4rem;
-              font-weight: bold;
-              color: #333;
-              display: block;
-              margin-top: 15px;
-            }
-
-            /* Animations */
-            @keyframes slideInRight {
-              from {
-                opacity: 0;
-                transform: translateX(150px);
-              }
-
-              to {
-                opacity: 1;
-                transform: translateX(0);
-              }
-            }
-
-            @keyframes slideInLeft {
-              from {
-                opacity: 0;
-                transform: translateX(-150px);
-              }
-
-              to {
-                opacity: 1;
-                transform: translateX(0);
-              }
-            }
           </style>
           </head>
 
@@ -505,35 +300,6 @@
             </section>
 
             <script>
-              document.addEventListener("DOMContentLoaded", function () {
-                const productSection = document.getElementById("product-section");
-                const products = document.querySelectorAll(".scrollbar-item");
-                let hasAnimated = false; // Prevents re-triggering
-
-                function handleScroll() {
-                  const sectionPosition = productSection.getBoundingClientRect().top;
-                  const screenHeight = window.innerHeight;
-
-                  if (sectionPosition < screenHeight * 0.75 && !hasAnimated) {
-                    hasAnimated = true;
-
-                    // Animate each product sequentially
-                    products.forEach((product, index) => {
-                      setTimeout(() => {
-                        if (index % 2 === 0) {
-                          product.style.animation = "slideInRight 1s ease-out forwards";
-                        } else {
-                          product.style.animation = "slideInLeft 1s ease-out forwards";
-                        }
-                      }, index * 500); // Delay for a cascading effect
-                    });
-
-                    window.removeEventListener("scroll", handleScroll); // Stop checking after animation
-                  }
-                }
-
-                window.addEventListener("scroll", handleScroll);
-              });
             </script>
 
       </section>
@@ -543,49 +309,6 @@
         - #CTA
       -->
 
-      <style>
-        /* Initially Hide the CTA Content & Image */
-        #cta-content,
-        #cta-banner {
-          opacity: 0;
-          transform: translateY(50px);
-        }
-
-        /* Fade-In & Slide-Up Animation */
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(50px);
-          }
-
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      </style>
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const ctaContent = document.getElementById("cta-content");
-          const ctaBanner = document.getElementById("cta-banner");
-
-          function animateCTA() {
-            const section = document.querySelector(".section.cta");
-            const sectionPos = section.getBoundingClientRect().top;
-            const screenPos = window.innerHeight / 1.3;
-
-            if (sectionPos < screenPos) {
-              ctaContent.style.animation = "fadeInUp 1s ease-out forwards";
-              setTimeout(() => {
-                ctaBanner.style.animation = "fadeInUp 1s ease-out forwards";
-              }, 300); // Image appears slightly after text
-            }
-          }
-
-          window.addEventListener("scroll", animateCTA);
-        });
-
-      </script>
       <section class="section cta" aria-label="cta">
         <div class="container">
 
@@ -771,27 +494,6 @@
   -->
   <style>
     /* Initially Hide Footer Elements */
-    #footer-content,
-    #footer-bottom,
-    #footer-links,
-    #footer-products,
-    #footer-contact {
-      opacity: 0;
-      transform: translateY(50px);
-    }
-
-    /* Fade-In & Slide-Up Animation */
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(50px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
   </style>
   </head>
 
@@ -896,33 +598,7 @@
     </footer>
 
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const footerElements = [
-          document.getElementById("footer-content"),
-          document.getElementById("footer-links"),
-          document.getElementById("footer-products"),
-          document.getElementById("footer-contact"),
-          document.getElementById("footer-bottom"),
-        ];
 
-        const footerSection = document.getElementById("footer-section");
-
-        function animateFooter() {
-          const sectionPos = footerSection.getBoundingClientRect().top;
-          const screenPos = window.innerHeight / 1.2;
-
-          if (sectionPos < screenPos) {
-            footerElements.forEach((element, index) => {
-              setTimeout(() => {
-                element.style.animation = "fadeInUp 1s ease-out forwards";
-              }, index * 200); // Adds delay for a staggered effect
-            });
-            window.removeEventListener("scroll", animateFooter); // Prevents re-triggering animation
-          }
-        }
-
-        window.addEventListener("scroll", animateFooter);
-      });
     </script>
 
     <!-- 
