@@ -1,9 +1,10 @@
-<!doctypehtml>
-    <html lang=en>
-    <meta charset=UTF-8>
-    <meta content="width=device-width,initial-scale=1" name=viewport>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
     <title>DIMAGCER</title>
-    <link href=./assets/css/style.css rel=stylesheet>
+    <link href="./assets/css/style.css" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,7 +12,7 @@
             padding: 0;
             box-sizing: border-box;
             background: linear-gradient(to right, #fff, #d3d3d3);
-            transition: background-color .3s ease
+            transition: background-color .3s ease;
         }
 
         header {
@@ -23,54 +24,54 @@
             color: #fff;
             padding: 10px 0;
             text-align: center;
-            z-index: 1000
+            z-index: 1000;
         }
 
         header h2 {
             margin: 0;
-            font-size: 25px
+            font-size: 25px;
         }
 
         nav {
             display: flex;
             justify-content: center;
             gap: 20px;
-            padding-top: 10px
+            padding-top: 10px;
         }
 
         nav a {
             color: #fff;
             text-decoration: none;
             font-size: 30px;
-            transition: color .3s
+            transition: color .3s;
         }
 
         nav a:hover {
-            color: #3498db
+            color: #3498db;
         }
 
         section {
             text-align: center;
-            padding: 80px 20px 20px
+            padding: 80px 20px 20px;
         }
 
         h1 {
             color: #333;
             text-align: center;
             font-size: 2.5rem;
-            margin-bottom: 20px
+            margin-bottom: 20px;
         }
 
         .main-image-container {
             margin-bottom: 20px;
-            transition: transform .3s ease-in-out
+            transition: transform .3s ease-in-out;
         }
 
         .main-image-container img {
             width: 80%;
             max-width: 600px;
             height: auto;
-            transition: transform .3s ease-in-out
+            transition: transform .3s ease-in-out;
         }
 
         .thumbnail-container {
@@ -78,7 +79,7 @@
             justify-content: center;
             gap: 20px;
             flex-wrap: wrap;
-            margin-top: 20px
+            margin-top: 20px;
         }
 
         .thumbnail-container img {
@@ -86,65 +87,67 @@
             height: auto;
             cursor: pointer;
             transition: transform .2s ease, background-color .3s ease;
-            border-radius: 10px
+            border-radius: 10px;
         }
 
         .thumbnail-container img:hover {
             transform: scale(1.1);
-            background-color: rgba(0, 0, 0, .1)
+            background-color: rgba(0, 0, 0, .1);
         }
 
         .thumbnail-container img.active {
             border: 3px solid #3498db;
-            background-color: rgba(52, 152, 219, .2)
+            background-color: rgba(52, 152, 219, .2);
         }
 
-        @media (max-width:600px) {
+        @media (max-width: 600px) {
             h1 {
-                font-size: 1.8rem
+                font-size: 1.8rem;
             }
 
             .main-image-container img {
-                width: 90%
+                width: 90%;
             }
 
             .thumbnail-container {
                 flex-direction: column;
-                align-items: center
+                align-items: center;
             }
 
             .thumbnail-container img {
-                width: 80px
+                width: 80px;
             }
 
             nav {
-                flex-direction: column
+                flex-direction: column;
             }
 
             nav a {
-                font-size: 1.2rem
+                font-size: 1.2rem;
             }
         }
     </style>
+</head>
+<body>
     <header>
-        <nav><a href=#home>Home</a> <a href=#about>About</a> <a href=#products>Products</a> <a href=#contact>Contact</a>
-        </nav>
+        <nav><a href="#home">Home</a> <a href="#about">About</a> <a href="#products">Products</a> <a href="#contact">Contact</a></nav>
     </header>
     <section>
-        <div class=main-image-container>
+        <div class="main-image-container">
             <center>
-                <h1>DIMAGCER</h1><img alt="Main Image" src=./assets/images/download.jpg id=main-image
-                    style="border:5px solid #87ceeb;border-radius:20px">
+                <h1>DIMAGCER</h1>
+                <img alt="Main Image" src="./assets/images/download.jpg" id="main-image" style="border:5px solid #87ceeb;border-radius:20px" loading="lazy">
             </center>
         </div>
-        <div class=thumbnail-container><img alt="Image 1" src=./assets/images/download.jpg
-                onclick='changeImage("./assets/images/download1.jpg",this)'> <img alt="Image 2"
-                src=./assets/images/download1.jpg onclick='changeImage("./assets/images/download2.jpg",this)'> <img
-                alt="Image 3" src=./assets/images/download2.jpg
-                onclick='changeImage("./assets/images/download3.jpg",this)'> <img alt="Image 4"
-                src=./assets/images/download3.jpg onclick='changeImage("./assets/images/download4.jpg",this)'></div>
+        <div class="thumbnail-container">
+            <img alt="Image 1" src="./assets/images/download.jpg" onclick="changeImage('./assets/images/download1.jpg',this)" loading="lazy">
+            <img alt="Image 2" src="./assets/images/download1.jpg" onclick="changeImage('./assets/images/download2.jpg',this)" loading="lazy">
+            <img alt="Image 3" src="./assets/images/download2.jpg" onclick="changeImage('./assets/images/download3.jpg',this)" loading="lazy">
+            <img alt="Image 4" src="./assets/images/download3.jpg" onclick="changeImage('./assets/images/download4.jpg',this)" loading="lazy">
+        </div>
     </section>
-    <script>// Array of image sources
+    <script>
+        // Array of image sources
         const images = [
             './assets/images/download1.jpg',
             './assets/images/download2.jpg',
@@ -185,74 +188,65 @@
         }
 
         // Start the auto image change when the page loads
-        window.onload = startAutoImageChange;</script>
-    <footer class=footer id=footer-section>
+        window.onload = startAutoImageChange;
+    </script>
+    <footer class="footer" id="footer-section">
         <div class="footer-top section">
-            <div class=container>
-                <div class=footer-brand id=footer-content><a href=# class=logo>Cercis Lifecare.</a>
-                    <p class=footer-text>At Cercis Lifecare, we are committed to improving lives through our range of
-                        high-quality pharmaceutical products. Our focus is on delivering effective, safe, and affordable
-                        medicines for a better tomorrow.
-                    <div class=schedule>
-                        <div class=schedule-icon><ion-icon name=time-outline></ion-icon></div><span class=span>Monday -
-                            Saturday:<br>9:00am - 6:00pm</span>
+            <div class="container">
+                <div class="footer-brand" id="footer-content">
+                    <a href="#" class="logo">Cercis Lifecare.</a>
+                    <p class="footer-text">At Cercis Lifecare, we are committed to improving lives through our range of high-quality pharmaceutical products. Our focus is on delivering effective, safe, and affordable medicines for a better tomorrow.</p>
+                    <div class="schedule">
+                        <div class="schedule-icon"><ion-icon name="time-outline"></ion-icon></div><span class="span">Monday - Saturday:<br>9:00am - 6:00pm</span>
                     </div>
                 </div>
-                <ul class=footer-list id=footer-links>
+                <ul class="footer-list" id="footer-links">
                     <li>
-                        <p class=footer-list-title>Quick Links
-                    <li><a href=# class=footer-link><ion-icon name=add-outline></ion-icon><span
-                                class=span>Home</span></a>
-                    <li><a href=# class=footer-link><ion-icon name=add-outline></ion-icon><span class=span>About
-                                Us</span></a>
-                    <li><a href=# class=footer-link><ion-icon name=add-outline></ion-icon><span class=span>Our
-                                Products</span></a>
-                    <li><a href=# class=footer-link><ion-icon name=add-outline></ion-icon><span
-                                class=span>Services</span></a>
-                    <li><a href=# class=footer-link><ion-icon name=add-outline></ion-icon><span
-                                class=span>Careers</span></a>
-                    <li><a href=# class=footer-link><ion-icon name=add-outline></ion-icon><span class=span>Contact
-                                Us</span></a>
+                        <p class="footer-list-title">Quick Links</p>
+                    </li>
+                    <li><a href="#" class="footer-link"><ion-icon name="add-outline"></ion-icon><span class="span">Home</span></a></li>
+                    <li><a href="#" class="footer-link"><ion-icon name="add-outline"></ion-icon><span class="span">About Us</span></a></li>
+                    <li><a href="#" class="footer-link"><ion-icon name="add-outline"></ion-icon><span class="span">Our Products</span></a></li>
+                    <li><a href="#" class="footer-link"><ion-icon name="add-outline"></ion-icon><span class="span">Services</span></a></li>
+                    <li><a href="#" class="footer-link"><ion-icon name="add-outline"></ion-icon><span class="span">Careers</span></a></li>
+                    <li><a href="#" class="footer-link"><ion-icon name="add-outline"></ion-icon><span class="span">Contact Us</span></a></li>
                 </ul>
-                <ul class=footer-list id=footer-products>
+                <ul class="footer-list" id="footer-products">
                     <li>
-                        <p class=footer-list-title>Our Products
-                    <li><a href=# class=footer-link><ion-icon name=add-outline></ion-icon><span
-                                class=span>DIMAGCER</span></a>
-                    <li><a href=# class=footer-link><ion-icon name=add-outline></ion-icon><span class=span>ESTOCER
-                                PLUS</span></a>
-                    <li><a href=# class=footer-link><ion-icon name=add-outline></ion-icon><span
-                                class=span>FLUPENCER</span></a>
-                    <li><a href=# class=footer-link><ion-icon name=add-outline></ion-icon><span
-                                class=span>Benfocer-CD3</span></a>
+                        <p class="footer-list-title">Our Products</p>
+                    </li>
+                    <li><a href="#" class="footer-link"><ion-icon name="add-outline"></ion-icon><span class="span">DIMAGCER</span></a></li>
+                    <li><a href="#" class="footer-link"><ion-icon name="add-outline"></ion-icon><span class="span">ESTOCER PLUS</span></a></li>
+                    <li><a href="#" class="footer-link"><ion-icon name="add-outline"></ion-icon><span class="span">FLUPENCER</span></a></li>
+                    <li><a href="#" class="footer-link"><ion-icon name="add-outline"></ion-icon><span class="span">Benfocer-CD3</span></a></li>
                 </ul>
-                <ul class=footer-list id=footer-contact>
+                <ul class="footer-list" id="footer-contact">
                     <li>
-                        <p class=footer-list-title>Contact Us
-                    <li class=footer-item>
-                        <div class=item-icon><ion-icon name=location-outline></ion-icon></div>
-                        <address class=item-text>Regd Office: RS No. 136/3B, 3B1, 2nd Floor, APK BY-Pass Road, TN - 625
-                            012<br><br>Admin. Off: 33, 5th Cross Road,<br>RMV 2nd Stage, AECS Layout,<br>Sanjay Nagar,
-                            Bengaluru, Karnataka</address>
-                    <li class=footer-item>
-                        <div class=item-icon><ion-icon name=call-outline></ion-icon></div><a href=tel:9500500784
-                            class=footer-link>+91-95005-00784</a> <a href=tel:9597139139
-                            class=footer-link>+91-95971-39139</a> <a href=tel:9345593660
-                            class=footer-link>+91-93455-93660</a>
-                    <li class=footer-item>
-                        <div class=item-icon><ion-icon name=mail-outline></ion-icon></div><a
-                            href=mailto:support@cercislifecare.com class=footer-link>support@cercislifecare.com</a>
+                        <p class="footer-list-title">Contact Us</p>
+                    </li>
+                    <li class="footer-item">
+                        <div class="item-icon"><ion-icon name="location-outline"></ion-icon></div>
+                        <address class="item-text">Regd Office: RS No. 136/3B, 3B1, 2nd Floor, APK BY-Pass Road, TN - 625 012<br><br>Admin. Off: 33, 5th Cross Road,<br>RMV 2nd Stage, AECS Layout,<br>Sanjay Nagar, Bengaluru, Karnataka</address>
+                    </li>
+                    <li class="footer-item">
+                        <div class="item-icon"><ion-icon name="call-outline"></ion-icon></div><a href="tel:9500500784" class="footer-link">+91-95005-00784</a> <a href="tel:9597139139" class="footer-link">+91-95971-39139</a> <a href="tel:9345593660" class="footer-link">+91-93455-93660</a>
+                    </li>
+                    <li class="footer-item">
+                        <div class="item-icon"><ion-icon name="mail-outline"></ion-icon></div><a href="mailto:support@cercislifecare.com" class="footer-link">support@cercislifecare.com</a>
+                    </li>
                 </ul>
             </div>
         </div>
-        <div class=footer-bottom id=footer-bottom>
-            <div class=container>
-                <p class=copyright>© 2024 All Rights Reserved by Cercis Lifecare.<br>Developed by Red Rivers Labs
-                <ul class=social-list>
-                    <li><a href=# class=social-link><ion-icon name=logo-facebook></ion-icon></a>
-                    <li><a href=# class=social-link><ion-icon name=logo-instagram></ion-icon></a>
-                    <li><a href=# class=social-link><ion-icon name=logo-twitter></ion-icon></a>
+        <div class="footer-bottom" id="footer-bottom">
+            <div class="container">
+                <p class="copyright">© 2024 All Rights Reserved by Cercis Lifecare.<br>Developed by Red Rivers Labs</p>
+                <ul class="social-list">
+                    <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                    <li><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                    <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
                 </ul>
             </div>
         </div>
     </footer>
+</body>
+</html>
