@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLUPENCER</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: linear-gradient(to right, #ffffff, #d3d3d3);
+            /* White to gray gradient */
+            transition: background-color 0.3s ease;
+        }
+
+        /* Header styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        header h2 {
+            margin: 0;
+            font-size: 25px;
+        }
+
+        /* Navigation list styles */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 30px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        /* Section styling */
+        section {
+            text-align: center;
+            padding: 80px 20px 20px;
+            /* Added padding-top to avoid overlap with header */
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        /* Main image container */
+        .main-image-container {
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .main-image-container img {
+            width: 80%;
+            max-width: 600px;
+            height: auto;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Styling the list of thumbnail images */
+        .thumbnail-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .thumbnail-container img {
+            width: 120px;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.2s ease, background-color 0.3s ease;
+            border-radius: 10px;
+        }
+
+        .thumbnail-container img:hover {
+            transform: scale(1.1);
+            background-color: rgba(0, 0, 0, 0.1);
+            /* Adding subtle background on hover */
+        }
+
+        /* Active state for clicked images */
+        .thumbnail-container img.active {
+            border: 3px solid #3498db;
+            background-color: rgba(52, 152, 219, 0.2);
+            /* Highlight active thumbnail */
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .main-image-container img {
+                width: 90%;
+            }
+
+            .thumbnail-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .thumbnail-container img {
+                width: 80px;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#products">Products</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section>
+
+
+        <!-- Main image container -->
+        <div class="main-image-container">
+            <center>
+                <h1>FLUPENCER</h1>
+                <img id="main-image" src="./assets/images/download.jpg"
+                    style="border:5px solid skyblue; border-radius: 20px;" alt="Main Image">
+            </center>
+
+        </div>
+
+        <!-- Thumbnail images -->
+        <div class="thumbnail-container">
+            <img src="./assets/images/download.jpg" alt="Image 1"
+                onclick="changeImage('./assets/images/download1.jpg', this)">
+            <img src="./assets/images/download1.jpg" alt="Image 2"
+                onclick="changeImage('./assets/images/download2.jpg', this)">
+            <img src="./assets/images/download2.jpg" alt="Image 3"
+                onclick="changeImage('./assets/images/download3.jpg', this)">
+            <img src="./assets/images/download3.jpg" alt="Image 4"
+                onclick="changeImage('./assets/images/download4.jpg', this)">
+        </div>
+    </section>
+
+    <script>
+        // Array of image sources
+        const images = [
+            './assets/images/download1.jpg',
+            './assets/images/download2.jpg',
+            './assets/images/download3.jpg',
+            './assets/images/download4.jpg'
+        ];
+
+        let currentIndex = 0;
+        let autoChangeInterval;
+
+        // Function to change the main image
+        function changeImage(imageSrc, clickedElement) {
+            // Update the main image
+            document.getElementById('main-image').src = imageSrc;
+
+            // Update the active thumbnail
+            const thumbnails = document.querySelectorAll('.thumbnail-container img');
+            thumbnails.forEach(img => img.classList.remove('active'));
+            clickedElement.classList.add('active');
+
+            // Clear previous interval for auto change
+            clearInterval(autoChangeInterval);
+
+            // Set the background to a gradient based on the clicked image
+            document.body.style.background = 'linear-gradient(to right, #ffffff, #d3d3d3)';
+            document.body.style.transition = 'background-color 0.3s ease';
+
+            // Restart the automatic image change with a 3-second delay
+            startAutoImageChange();
+        }
+
+        // Function to automatically change the image every 3 seconds
+        function startAutoImageChange() {
+            autoChangeInterval = setInterval(() => {
+                currentIndex = (currentIndex + 1) % images.length;
+                changeImage(images[currentIndex], document.querySelectorAll('.thumbnail-container img')[currentIndex]);
+            }, 3000); // 3-second interval
+        }
+
+        // Start the auto image change when the page loads
+        window.onload = startAutoImageChange;
+
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer-section">
+        <div class="footer-top section">
+            <div class="container">
+
+                <div class="footer-brand" id="footer-content">
+                    <a href="#" class="logo">Cercis Lifecare.</a>
+                    <p class="footer-text">
+                        At Cercis Lifecare, we are committed to improving lives through our range of high-quality
+                        pharmaceutical
+                        products. Our focus is on delivering effective, safe, and affordable medicines for a better
+                        tomorrow.
+                    </p>
+                    <div class="schedule">
+                        <div class="schedule-icon">
+                            <ion-icon name="time-outline"></ion-icon>
+                        </div>
+                        <span class="span">
+                            Monday - Saturday:<br>
+                            9:00am - 6:00pm
+                        </span>
+                    </div>
+                </div>
+
+                <ul class="footer-list" id="footer-links">
+                    <li>
+                        <p class="footer-list-title">Quick Links</p>
+                    </li>
+                    <li><a href="#" class="footer-link"><ion-icon name="add-outline"></ion-icon><span
+                                class="span">Home</span></a>
+                    </li>
+                    <li><a href="#" class="footer-link"><ion-icon name="add-outline"></ion-icon><span class="span">About
+                                Us</span></a></li>
+                    <li><a href="#" class="footer-link"><ion-icon name="add-outline"></ion-icon><span class="span">Our
+                                Products</span></a></li>
+                    <li><a href="#" class="footer-link"><ion-icon name="add-outline"></ion-icon><span
+                                class="span">Services</span></a></li>
+                    <li><a href="#" class="footer-link"><ion-icon name="add-outline"></ion-icon><span
+                                class="span">Careers</span></a></li>
+                    <li><a href="#" class="footer-link"><ion-icon name="add-outline"></ion-icon><span
+                                class="span">Contact
+                                Us</span></a></li>
+                </ul>
+
+                <ul class="footer-list" id="footer-products">
+                    <li>
+                        <p class="footer-list-title">Our Products</p>
+                    </li>
+                    <li><a href="#" class="footer-link"><ion-icon name="add-outline"></ion-icon><span
+                                class="span">DIMAGCER</span></a></li>
+                    <li><a href="#" class="footer-link"><ion-icon name="add-outline"></ion-icon><span
+                                class="span">ESTOCER
+                                PLUS</span></a></li>
+                    <li><a href="#" class="footer-link"><ion-icon name="add-outline"></ion-icon><span
+                                class="span">FLUPENCER</span></a></li>
+                    <li><a href="#" class="footer-link"><ion-icon name="add-outline"></ion-icon><span
+                                class="span">Benfocer-CD3</span></a></li>
+                </ul>
+
+                <ul class="footer-list" id="footer-contact">
+                    <li>
+                        <p class="footer-list-title">Contact Us</p>
+                    </li>
+                    <li class="footer-item">
+                        <div class="item-icon"><ion-icon name="location-outline"></ion-icon></div>
+                        <address class="item-text">
+                            Regd Office: RS No. 136/3B, 3B1, 2nd Floor, APK BY-Pass Road, TN - 625 012
+                            <br><br>Admin. Off: 33, 5th Cross Road, <br>RMV 2nd Stage, AECS Layout,<br> Sanjay Nagar,
+                            Bengaluru,
+                            Karnataka
+                        </address>
+                    </li>
+                    <li class="footer-item">
+                        <div class="item-icon"><ion-icon name="call-outline"></ion-icon></div>
+                        <a href="tel:9500500784" class="footer-link">+91-95005-00784</a>
+                        <a href="tel:9597139139" class="footer-link">+91-95971-39139</a>
+                        <a href="tel:9345593660" class="footer-link">+91-93455-93660</a>
+                    </li>
+                    <li class="footer-item">
+                        <div class="item-icon"><ion-icon name="mail-outline"></ion-icon></div>
+                        <a href="mailto:support@cercislifecare.com" class="footer-link">support@cercislifecare.com</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom" id="footer-bottom">
+            <div class="container">
+                <p class="copyright">
+                    &copy; 2024 All Rights Reserved by Cercis Lifecare.
+                    <br>Developed by Red Rivers Labs
+                </p>
+
+                <ul class="social-list">
+                    <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                    <li><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                    <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

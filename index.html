@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cercis - Life Care | Quality Healthcare Products</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Cercis Life Care offers high-quality pharmaceutical products, including DIMAGCER, ESTOCER PLUS, and FLUPENCER. Trusted healthcare solutions for your well-being.">
+  <meta name="keywords" content="Cercis Life Care, pharmaceutical products, healthcare, medicine, health solutions">
+  <meta name="author" content="Cercis Life Care">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.cercislifecare.vercel.app/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Cercis - Life Care | Quality Healthcare Products">
+  <meta property="og:description"
+    content="Cercis Life Care provides high-quality pharmaceutical products to enhance your well-being.">
+  <meta property="og:image" content="https://www.cercislifecare.vercel.app/assets/images/logo.jpg">
+  <meta property="og:url" content="https://www.cercislifecare.vercel.app/">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cercis - Life Care | Quality Healthcare Products">
+  <meta name="twitter:description"
+    content="Cercis Life Care offers high-quality pharmaceutical products for your health and well-being.">
+  <meta name="twitter:image" content="https://www.cercislifecare.vercel.app/assets/images/logo.jpg">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./assets/images/logo.jpg" type="image/jpg+xml">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Roboto:wght@400;500;600&display=swap"
+    rel="stylesheet">
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header">
+
+    <div class="header-top">
+      <div class="container">
+
+        <ul class="contact-list">
+
+          <li class="contact-item">
+            <ion-icon name="mail-outline"></ion-icon>
+
+            <a href="mailto:info@example.com" class="contact-link">info@example.com</a>
+          </li>
+
+          <li class="contact-item">
+            <ion-icon name="call-outline"></ion-icon>
+
+            <a href="tel:+917052101786" class="contact-link">+91-7052-101-786</a>
+          </li>
+
+        </ul>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="header-bottom" data-header>
+      <div class="container">
+
+        <img src="./assets/images/logo.jpg" alt="">
+
+        <nav class="navbar container" data-navbar>
+          <ul class="navbar-list">
+
+            <li>
+              <a href="#home" class="navbar-link" data-nav-link>Home</a>
+            </li>
+
+            <li>
+              <a href="#products" class="navbar-link" data-nav-link>Products</a>
+            </li>
+
+            <li>
+              <a href="#about" class="navbar-link" data-nav-link>About Us</a>
+            </li>
+
+
+            <li>
+              <a href="#" class="navbar-link" data-nav-link>Contact</a>
+            </li>
+
+          </ul>
+        </nav>
+
+        <a href="#" class="btn">Call Us Now</a>
+
+        <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
+          <ion-icon name="menu-sharp" aria-hidden="true" class="menu-icon"></ion-icon>
+          <ion-icon name="close-sharp" aria-hidden="true" class="close-icon"></ion-icon>
+        </button>
+
+      </div>
+    </div>
+
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+      <style>
+        /* Initially Hide Hero Section Elements */
+        #hero-content,
+        #hero-banner {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+
+        /* Animation for Text */
+        @keyframes fadeInLeft {
+          from {
+            opacity: 0;
+            transform: translateX(-100px);
+          }
+
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        /* Animation for Image */
+        @keyframes fadeInRight {
+          from {
+            opacity: 0;
+            transform: translateX(100px);
+          }
+
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+      </style>
+
+      <script>document.addEventListener("DOMContentLoaded", function () {
+          const heroContent = document.getElementById("hero-content");
+          const heroBanner = document.getElementById("hero-banner");
+
+          heroContent.style.animation = "fadeInLeft 2s ease-out forwards";
+          setTimeout(() => {
+            heroBanner.style.animation = "fadeInRight 2s ease-out forwards";
+          }, 500);
+        });
+
+      </script>
+
+      <section class="section hero" id="hero-section" style="background: linear-gradient(to right,#ffffff, #def5f5 );"
+        aria-label=" hero">
+        <div class="container" id="hero-container">
+          <div class="hero-content" id="hero-content">
+
+            <h1 class="h1 hero-title" style="color: black;"><span style="font-size: 34px;">Welcome To</span>Cercis Life
+              Care</h1>
+            <p class="section-subtitle" style="text-transform: lowercase; font-style: italic; font-family: cursive;">
+              Caring to the Lives... </p>
+            <p class="hero-text">
+              To revolutionize global healthcare by delivering Innovative, Accessible and Sustainable Pharmaceutical
+              solutions that enhance and extend lives.
+              <br><br>
+              <button type="submit" class="btn"><a href="tel:+91 95005 00784">Call Now</a></button>
+            </p>
+          </div>
+          <figure class="hero-banner" id="hero-banner">
+            <img src="./assets/images/hero-banner.png" width="587" height="839" alt="hero banner" class="w-100">
+          </figure>
+        </div>
+      </section>
+      <!--
+      Image
+      -->
+      <style>
+        #blogImage {
+          width: 100%;
+          height: 70%;
+          transition: opacity 0.5s ease-in-out;
+          opacity: 1;
+          object-fit: cover;
+          /* Optional: keeps image looking good inside the box */
+        }
+
+        #blogImage.fade-out {
+          opacity: 0;
+        }
+      </style>
+
+      <section>
+        <img id="blogImage" src="./assets/images/blog-1.jpg">
+      </section>
+
+      <script>
+        const imageElement = document.getElementById("blogImage");
+        let currentIndex = 1;
+
+        setInterval(() => {
+          imageElement.classList.add("fade-out");
+
+          setTimeout(() => {
+            currentIndex++;
+            if (currentIndex > 3) currentIndex = 1;
+            imageElement.src = `./assets/images/blog-${currentIndex}.jpg`;
+            imageElement.classList.remove("fade-out");
+          }, 500);
+        }, 3000);
+      </script>
+
+
+
+
+      <!-- 
+        - #ABOUT
+      -->
+
+
+      <section class="section about" id="about-section" aria-label="about"
+        style="background: linear-gradient(to right,#ffffff, #def5f5 );">
+        <div class="container" id="about-container">
+
+          <figure class="about-banner" id="about-banner">
+            <img src="./assets/images/doctorimg.avif" width="570" height="608" loading="lazy" alt="about banner"
+              class="w-100">
+          </figure>
+
+          <div class="about-content" id="about-content">
+
+            <p class="section-subtitle">About Us</p>
+
+            <h2 class="h2 section-title">We Care for Your Health and Well-being</h2>
+            <p class="section-text section-text-1">
+              Vision: <br>
+              To revolutionize global healthcare by delivering Innovative, Accessible and Sustainable
+              Pharmaceutical solutions that enhance and extend lives.
+            </p>
+
+            <p class="section-text">
+              Mission: <br>
+              To improve global health by developing and delivering high-quality, innovative, and affordable
+              pharmaceutical solutions. We are committed to scientific excellence, ethical practices, and
+              sustainable operations to ensure patients worldwide have access to safe and effective treatments.
+              Through collaboration, research, and a patient-centric approach, we strive to enhance healthcare
+              outcomes and transform lives.
+            </p>
+
+            <a href="tel:+91 95005 00784" class="btn">Contact Us</a>
+
+          </div>
+
+        </div>
+      </section>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const aboutSection = document.getElementById("about-section");
+          const aboutBanner = document.getElementById("about-banner");
+          const aboutContent = document.getElementById("about-content");
+          let hasAnimated = false; // Prevent re-triggering
+
+          function handleScroll() {
+            const sectionPosition = aboutSection.getBoundingClientRect().top;
+            const screenHeight = window.innerHeight;
+
+            if (sectionPosition < screenHeight * 0.75 && !hasAnimated) {
+              hasAnimated = true;
+
+              // First Animation - Banner (Image)
+              aboutBanner.style.animation = "slideInLeft 1.5s ease-out forwards";
+
+              // Second Animation - Content (Delayed)
+              setTimeout(() => {
+                aboutContent.style.animation = "slideInRight 1.5s ease-out forwards";
+              }, 500); // 500ms delay
+
+              window.removeEventListener("scroll", handleScroll); // Stop checking after animation
+            }
+          }
+
+          window.addEventListener("scroll", handleScroll);
+        });
+      </script>
+
+
+
+
+      <!-- 
+        - #DOCTOR
+      -->
+      <section class="section doctor" aria-label="doctor"
+        style="background: linear-gradient(to right,#ffffff, #def5f5 );">
+        <div class="container">
+
+          <style>
+            /* General Reset */
+            * {
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+            }
+
+            body {
+              font-family: Arial, sans-serif;
+              background-color: #f8f9fa;
+            }
+
+            /* Product Section */
+            #product-section {
+              position: relative;
+              min-height: 100vh;
+              padding: 50px 20px;
+              text-align: center;
+            }
+
+            #product-container {
+              max-width: 1400px;
+              margin: 0 auto;
+            }
+
+
+            .has-scrollbar {
+              display: flex;
+              flex-direction: column;
+              gap: 30px;
+              justify-content: center;
+              flex-wrap: wrap;
+            }
+
+            .scrollbar-item {
+              list-style: none;
+              opacity: 0;
+              /* Initially Hidden */
+              transform: translateX(50px);
+              /* Initial position */
+            }
+
+            .doctor-card {
+              background: white;
+              padding: 20px;
+              border-radius: 10px;
+              box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+              text-align: center;
+              max-width: 1000px;
+            }
+
+
+
+            .card-banner img {
+              width: 100%;
+              height: 600px;
+              /* Increased Height */
+              object-fit: cover;
+              border-radius: 10px;
+            }
+
+            @media (max-width:500px) {
+              .card-banner img {
+                height: 250px;
+              }
+            }
+
+            @media (max-width:760px) {
+              .card-banner img {
+                height: 250px;
+              }
+            }
+
+            .card-title {
+              text-decoration: none;
+              font-size: 1.4rem;
+              font-weight: bold;
+              color: #333;
+              display: block;
+              margin-top: 15px;
+            }
+
+            /* Animations */
+            @keyframes slideInRight {
+              from {
+                opacity: 0;
+                transform: translateX(150px);
+              }
+
+              to {
+                opacity: 1;
+                transform: translateX(0);
+              }
+            }
+
+            @keyframes slideInLeft {
+              from {
+                opacity: 0;
+                transform: translateX(-150px);
+              }
+
+              to {
+                opacity: 1;
+                transform: translateX(0);
+              }
+            }
+          </style>
+          </head>
+
+          <body>
+
+            <section class="section doctor" id="product-section" aria-label="doctor">
+              <div class="container" id="product-container">
+
+                <p class="section-subtitle text-center"></p>
+                <h2 class="h2 section-title text-center">Our Products</h2>
+
+                <ul class="has-scrollbar">
+                  <li class="scrollbar-item" id="product-1">
+                    <div class="doctor-card">
+                      <div class="card-banner">
+                        <img src="./assets/images/download.jpg" width="500" height="600" loading="lazy" alt="DIMAGCER">
+                      </div>
+                      <h3 class="h3"><a href="./product1.html" class="card-title">DIMAGCER</a></h3>
+                    </div>
+                  </li>
+
+                  <li class="scrollbar-item" id="product-2">
+                    <div class="doctor-card">
+                      <div class="card-banner">
+                        <img src="./assets/images/download1.jpg" width="500" height="600" loading="lazy"
+                          alt="ESTOCER PLUS">
+                      </div>
+                      <h3 class="h3"><a href="./product2.html" class="card-title">ESTOCER PLUS</a></h3>
+                    </div>
+                  </li>
+
+                  <li class="scrollbar-item" id="product-3">
+                    <div class="doctor-card">
+                      <div class="card-banner">
+                        <img src="./assets/images/download2.jpg" width="500" height="600" loading="lazy"
+                          alt="FLUPENCER">
+                      </div>
+                      <h3 class="h3"><a href="./product3.html" class="card-title">FLUPENCER</a></h3>
+                    </div>
+                  </li>
+
+                  <li class="scrollbar-item" id="product-4">
+                    <div class="doctor-card">
+                      <div class="card-banner">
+                        <img src="./assets/images/download3.jpg" width="500" height="600" loading="lazy"
+                          alt="BenFocer-CD3">
+                      </div>
+                      <h3 class="h3"><a href="./product4.html" class="card-title">BenFocer-CD3</a></h3>
+                    </div>
+                  </li>
+                </ul>
+
+              </div>
+            </section>
+
+            <script>
+              document.addEventListener("DOMContentLoaded", function () {
+                const productSection = document.getElementById("product-section");
+                const products = document.querySelectorAll(".scrollbar-item");
+                let hasAnimated = false; // Prevents re-triggering
+
+                function handleScroll() {
+                  const sectionPosition = productSection.getBoundingClientRect().top;
+                  const screenHeight = window.innerHeight;
+
+                  if (sectionPosition < screenHeight * 0.75 && !hasAnimated) {
+                    hasAnimated = true;
+
+                    // Animate each product sequentially
+                    products.forEach((product, index) => {
+                      setTimeout(() => {
+                        if (index % 2 === 0) {
+                          product.style.animation = "slideInRight 1s ease-out forwards";
+                        } else {
+                          product.style.animation = "slideInLeft 1s ease-out forwards";
+                        }
+                      }, index * 500); // Delay for a cascading effect
+                    });
+
+                    window.removeEventListener("scroll", handleScroll); // Stop checking after animation
+                  }
+                }
+
+                window.addEventListener("scroll", handleScroll);
+              });
+            </script>
+
+      </section>
+
+
+      <!-- 
+        - #CTA
+      -->
+
+      <style>
+        /* Initially Hide the CTA Content & Image */
+        #cta-content,
+        #cta-banner {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+
+        /* Fade-In & Slide-Up Animation */
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(50px);
+          }
+
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      </style>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const ctaContent = document.getElementById("cta-content");
+          const ctaBanner = document.getElementById("cta-banner");
+
+          function animateCTA() {
+            const section = document.querySelector(".section.cta");
+            const sectionPos = section.getBoundingClientRect().top;
+            const screenPos = window.innerHeight / 1.3;
+
+            if (sectionPos < screenPos) {
+              ctaContent.style.animation = "fadeInUp 1s ease-out forwards";
+              setTimeout(() => {
+                ctaBanner.style.animation = "fadeInUp 1s ease-out forwards";
+              }, 300); // Image appears slightly after text
+            }
+          }
+
+          window.addEventListener("scroll", animateCTA);
+        });
+
+      </script>
+      <section class="section cta" aria-label="cta">
+        <div class="container">
+
+          <figure class="cta-banner" id="cta-banner">
+            <img src="./assets/images/hero-banner.png" width="1056" height="1076" loading="lazy" alt="cta banner"
+              class="w-100">
+          </figure>
+
+          <div class="cta-content" id="cta-content">
+
+            <p class="section-subtitle">Explore Our Products</p>
+
+            <h2 class="h2 section-title">Discover Cutting-Edge Pharmaceutical Solutions</h2>
+
+            <a href="#" class="btn">Learn More</a>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+
+    </article>
+  </main>
+
+
+  <!-- 
+              - #SERVICE
+            -->
+
+  <section class="section service" id="service" aria-label="service"
+    style="background: linear-gradient(to right,#ffffff, #def5f5 );">
+    <div class="container">
+
+
+      <h2 class="h2 section-title text-center">Our Core Values</h2>
+
+      <ul class="service-list">
+
+
+        <li>
+          <div class="service-card">
+
+
+            <div>
+              <h3 class="h3 card-title" style="margin-top: 20px;">Patient-Centricity</h3>
+
+              <p class="card-text">
+                Prioritizing patient's health, safety, and well-being in every decision and product we create.
+                and provide the consumers with product information and guidance.
+              </p>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <br><br><br>
+          <div class="service-card">
+
+            <div>
+              <h3 class="h3 card-title">Innovation</h3>
+
+              <p class="card-text">
+                Continuously pushing the boundaries of science and technology to develop groundbreaking treatments and
+                improve patient
+                outcomes.
+              </p>
+            </div>
+
+          </div>
+        </li>
+
+        <li class="service-banner">
+          <div style="display: flex; align-items: center; justify-content: center;">
+            <ul
+              style="color: black; font-weight: 700; font-size: 30px; width: 400px; padding: 15px; border: 2px solid black; text-align: center; border-radius: 30px;">
+              <li style="padding-bottom: 20px;">INTEGRITY</li>
+
+              <li style="padding-bottom: 20px;">PATIENT-CENTRICITY</li>
+
+              <li style="padding-bottom: 20px;">QUALITY ASSURANCE</li>
+
+              <li style="padding-bottom: 20px;">INNOVATION</li>
+
+              <li style="padding-bottom: 20px;">ETHICS</li>
+            </ul>
+          </div>
+
+        </li>
+
+        <li>
+          <br><br><br>
+          <div class="service-card">
+
+
+            <div>
+              <h3 class="h3 card-title">Quality Assurance</h3>
+
+              <p class="card-text">
+                We ensure every product is manufactured following the highest industry standards, focusing on
+                quality control and safety.
+              </p>
+            </div>
+
+          </div>
+        </li>
+
+        <li>
+          <br><br><br><br>
+          <div class="service-card">
+
+
+            <div>
+              <h3 class="h3 card-title">Integrity</h3>
+
+              <p class="card-text">
+                Upholding the highest standards of transparency & honesty.
+              </p>
+            </div>
+
+          </div>
+        </li>
+
+
+
+      </ul>
+      <div id="different">
+        <style>
+          #different {
+            width: 400px;
+            margin-top: 0;
+            margin-left: 32%;
+          }
+
+          @media (max-width:500px) {
+            #different {
+              margin-left: 1%;
+              margin-top: 10%;
+              width: 300px;
+            }
+          }
+
+
+
+          @media (max-width:900px) {
+            #different {
+              margin-left: 1%;
+              margin-top: 10%;
+              width: 410px;
+            }
+          }
+        </style>
+        <br><br><br><br>
+        <div class="service-card">
+
+
+          <div>
+            <h3 class="h3 card-title">Ethics</h3>
+
+            <p class="card-text">
+              Ensuring ethical responsibility in all operations.
+              Cercis Lifecare stands for providing top-tier products
+              that meet the evolving needs of healthcare.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+  <br><br>
+  <br><br><br>
+
+
+  <!-- 
+    - #FOOTER
+  -->
+  <style>
+    /* Initially Hide Footer Elements */
+    #footer-content,
+    #footer-bottom,
+    #footer-links,
+    #footer-products,
+    #footer-contact {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+    /* Fade-In & Slide-Up Animation */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+  </head>
+
+  <body>
+
+    <footer class="footer" id="footer-section">
+      <div class="footer-top section">
+        <div class="container">
+
+          <div class="footer-brand" id="footer-content">
+            <a href="#" class="logo">Cercis Lifecare.</a>
+            <p class="footer-text">
+              At Cercis Lifecare, we are committed to improving lives through our range of high-quality pharmaceutical
+              products. Our focus is on delivering effective, safe, and affordable medicines for a better tomorrow.
+            </p>
+            <div class="schedule">
+              <div class="schedule-icon">
+                <ion-icon name="time-outline"></ion-icon>
+              </div>
+              <span class="span">
+                Monday - Saturday:<br>
+                9:00am - 6:00pm
+              </span>
+            </div>
+          </div>
+
+          <ul class="footer-list" id="footer-links">
+            <li>
+              <p class="footer-list-title">Quick Links</p>
+            </li>
+            <li><a href="#" class="footer-link"><ion-icon name="add-outline"></ion-icon><span
+                  class="span">Home</span></a>
+            </li>
+            <li><a href="#" class="footer-link"><ion-icon name="add-outline"></ion-icon><span class="span">About
+                  Us</span></a></li>
+            <li><a href="#" class="footer-link"><ion-icon name="add-outline"></ion-icon><span class="span">Our
+                  Products</span></a></li>
+            <li><a href="#" class="footer-link"><ion-icon name="add-outline"></ion-icon><span
+                  class="span">Services</span></a></li>
+            <li><a href="#" class="footer-link"><ion-icon name="add-outline"></ion-icon><span
+                  class="span">Careers</span></a></li>
+            <li><a href="#" class="footer-link"><ion-icon name="add-outline"></ion-icon><span class="span">Contact
+                  Us</span></a></li>
+          </ul>
+
+          <ul class="footer-list" id="footer-products">
+            <li>
+              <p class="footer-list-title">Our Products</p>
+            </li>
+            <li><a href="#" class="footer-link"><ion-icon name="add-outline"></ion-icon><span
+                  class="span">DIMAGCER</span></a></li>
+            <li><a href="#" class="footer-link"><ion-icon name="add-outline"></ion-icon><span class="span">ESTOCER
+                  PLUS</span></a></li>
+            <li><a href="#" class="footer-link"><ion-icon name="add-outline"></ion-icon><span
+                  class="span">FLUPENCER</span></a></li>
+            <li><a href="#" class="footer-link"><ion-icon name="add-outline"></ion-icon><span
+                  class="span">Benfocer-CD3</span></a></li>
+          </ul>
+
+          <ul class="footer-list" id="footer-contact">
+            <li>
+              <p class="footer-list-title">Contact Us</p>
+            </li>
+            <li class="footer-item">
+              <div class="item-icon"><ion-icon name="location-outline"></ion-icon></div>
+              <address class="item-text">
+                Regd Office: RS No. 136/3B, 3B1, 2nd Floor, APK BY-Pass Road, TN - 625 012
+                <br><br>Admin. Off: 33, 5th Cross Road, <br>RMV 2nd Stage, AECS Layout,<br> Sanjay Nagar, Bengaluru,
+                Karnataka
+              </address>
+            </li>
+            <li class="footer-item">
+              <div class="item-icon"><ion-icon name="call-outline"></ion-icon></div>
+              <a href="tel:9500500784" class="footer-link">+91-95005-00784</a>
+              <a href="tel:9597139139" class="footer-link">+91-95971-39139</a>
+              <a href="tel:9345593660" class="footer-link">+91-93455-93660</a>
+            </li>
+            <li class="footer-item">
+              <div class="item-icon"><ion-icon name="mail-outline"></ion-icon></div>
+              <a href="mailto:support@cercislifecare.com" class="footer-link">support@cercislifecare.com</a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+
+      <div class="footer-bottom" id="footer-bottom">
+        <div class="container">
+          <p class="copyright">
+            &copy; 2024 All Rights Reserved by Cercis Lifecare.
+            <br>Developed by Red Rivers Labs
+          </p>
+
+          <ul class="social-list">
+            <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+          </ul>
+        </div>
+      </div>
+
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const footerElements = [
+          document.getElementById("footer-content"),
+          document.getElementById("footer-links"),
+          document.getElementById("footer-products"),
+          document.getElementById("footer-contact"),
+          document.getElementById("footer-bottom"),
+        ];
+
+        const footerSection = document.getElementById("footer-section");
+
+        function animateFooter() {
+          const sectionPos = footerSection.getBoundingClientRect().top;
+          const screenPos = window.innerHeight / 1.2;
+
+          if (sectionPos < screenPos) {
+            footerElements.forEach((element, index) => {
+              setTimeout(() => {
+                element.style.animation = "fadeInUp 1s ease-out forwards";
+              }, index * 200); // Adds delay for a staggered effect
+            });
+            window.removeEventListener("scroll", animateFooter); // Prevents re-triggering animation
+          }
+        }
+
+        window.addEventListener("scroll", animateFooter);
+      });
+    </script>
+
+    <!-- 
+    - #BACK TO TOP
+  -->
+
+    <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+      <ion-icon name="caret-up" aria-hidden="true"></ion-icon>
+    </a>
+
+
+
+
+
+    <!-- 
+    - custom js link
+  -->
+    <script src="./assets/js/script.js" defer></script>
+
+    <!-- 
+    - ionicon link
+  -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  </body>
+
+</html>
